@@ -1,0 +1,18 @@
+<div class="product-card">
+  <div class="title">
+    <h2>{{product.name}}</h2>
+    <p>{{product.collection}}</p>
+    <p>{{product.addInfo}}</p>
+  </div>
+  <img class="image"
+    src={{product.url}}>
+  <div class="price-button">
+    <p>$ {{product.price}}</p>
+    <div *ngIf="isLogged" class="qty-btn">
+      <button class="small-btn" (click)="minusQ()">-</button>
+      <td>{{getNumItems()}}</td>
+      <button class="small-btn" (click)="plusQ()">+</button>
+  </div>
+  </div>
+  <button *ngIf="isLogged" class="add-btn" (click)="addToCart(product)">Añadir al carrito</button>
+</div>

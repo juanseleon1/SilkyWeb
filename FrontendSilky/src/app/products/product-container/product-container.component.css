@@ -1,0 +1,25 @@
+.all-products {
+  margin: 5%;
+  padding: 30pt;
+  box-shadow: 1px 1px 3px #999;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.custom-pagination ::ng-deep .ngx-pagination .current {
+  background: rgba(39, 71, 49, 0.798) !important;
+  border-radius: 50% !important;
+}
+
+.custom-pagination ::ng-deep .ngx-pagination {
+  margin-top: 25px !important;
+}

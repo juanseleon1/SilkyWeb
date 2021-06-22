@@ -1,0 +1,104 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1em;
+  margin: 0;
+  background-color: rgb(252, 235, 235);
+}
+
+ul {
+  font-family: "Avenir";
+}
+
+nav {
+  background-color: rgb(205, 231, 233);
+  top: 0;
+  width: 100%;
+  padding: 1em 1em 1em 0;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+}
+
+.size-logo {
+  font-size: 2rem;
+  font-family: "Athene";
+}
+
+.contact-color {
+  color: #030303;
+}
+
+nav a {
+  text-decoration: none;
+  color: #030303;
+  padding: 0.25rem 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: rgb(5, 5, 5);
+}
+
+a.underline {
+  position: relative;
+}
+
+a.underline:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #030303;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.underline:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.icon:hover {
+  fill: #419670;
+}
+
+.nav-content {
+  display: flex;
+}

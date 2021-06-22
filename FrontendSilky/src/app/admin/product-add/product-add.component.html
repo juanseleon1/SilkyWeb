@@ -1,0 +1,28 @@
+<div class="add-product">
+    <!--<form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">-->
+        <form>
+        <div class="info">
+            <label>Imagen</label>
+            <input type="text" [(ngModel)]="product.url" name="url">
+        </div>
+        <div class="info">
+            <label>Nombre</label>
+            <input type="text" [(ngModel)]="product.name" name="name">
+        </div>
+        <div class="info">
+            <label>Descripción</label>
+            <input type="text" [(ngModel)]="product.addInfo" name="addInfo">
+        </div>
+        <div class="info">
+            <label>Precio</label>
+            <input type="number" value="0" [(ngModel)]="product.price" name="price">
+        </div>
+        <div class="info">
+            <label>Colección</label>
+            <input type="text" [(ngModel)]="product.collection" name="collection">
+            <!--<input type="text" formControlName="collection">-->
+        </div>
+        <button (click)="onSubmit()">Agregar</button>
+    </form>
+</div>
+<app-footer></app-footer>

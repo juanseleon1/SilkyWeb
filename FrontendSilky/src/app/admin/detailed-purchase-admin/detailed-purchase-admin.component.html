@@ -1,0 +1,30 @@
+<div class="products">
+  <div class="title">
+      <h2>Productos de la Compra {{purch.id}}</h2>
+      <h3>Compra realizada por {{getUser()}}</h3>
+  </div>
+  <hr>
+  <table>
+  <tr>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Colección</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Subtotal</th>
+  </tr>
+  <tr *ngFor="let product of purch.purchaseItems">
+      <td><img src="{{getUrl(product.product.name)}}"></td>
+      <td>{{product.product.name}}</td>
+      <td>{{product.product.addInfo}}</td>
+      <td>{{product.product.collection}}</td>
+      <td>$ {{product.product.price}}</td>
+      <td>{{getCant(product.product.name)}}</td>
+      <td>$ {{getSubT(product.product.name)}}</td>
+  </tr>
+  </table>
+  <p class="total" ><b>Total:</b> $ {{purch.total}}</p>
+  <button routerLink="/admin/sale">Volver a todas las compras</button>
+</div>
+<app-footer></app-footer>

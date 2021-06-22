@@ -1,0 +1,48 @@
+.purchase {
+  width: 40%;
+  margin: 100pt;
+  padding: 30pt;
+  box-shadow: 1px 1px 3px #999;
+  border-radius: 50px;
+}
+
+.line-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10pt 0;
+}
+
+.price-button {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+img {
+  width: 60pt;
+}
+
+button {
+  width: auto;
+  height: auto;
+  border: none;
+  background-color: transparent;
+}
+
+svg:hover {
+  fill: #f44336;
+}
+
+p {
+  width: 100%;
+  text-align: left;
+  padding-left: 15pt;
+}
+
+hr {
+  margin: 15pt 0;
+}

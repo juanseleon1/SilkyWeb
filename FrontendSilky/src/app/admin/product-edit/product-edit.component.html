@@ -1,0 +1,26 @@
+<div class="edit-product">
+    <form>
+        <div class="info">
+            <label>Imagen</label>
+            <input type="url" [(ngModel)]="product.url" name="url">
+        </div>
+        <div class="info">
+            <label>Nombre</label>
+            <input type="text" [(ngModel)]="product.name" name="name">
+        </div>
+        <div class="info">
+            <label>Descripción</label>
+            <input type="text" [(ngModel)]="product.addInfo" name="addInfo">
+        </div>
+        <div class="info">
+            <label>Precio</label>
+            <input type="number" [(ngModel)]="product.price" name="price">
+        </div>
+        <div class="info">
+            <label>Colección</label>
+            <input type="text" [(ngModel)]="product.collection" name="collection">
+        </div>
+        <button (click)="onSubmit()">Guardar</button>
+    </form>
+</div>
+<app-footer></app-footer>

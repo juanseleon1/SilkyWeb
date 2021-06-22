@@ -1,0 +1,139 @@
+.products {
+  width: 80%;
+  margin: 130pt 75pt;
+  padding: 30pt;
+  box-shadow: 1px 1px 3px #999;
+  border-radius: 50px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  word-wrap: break-word;
+}
+
+td,
+th {
+  padding: 8px;
+}
+
+img {
+  width: 100pt;
+  max-height: 80pt;
+  object-fit: cover;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-add {
+  background-color: rgba(39, 71, 49, 0.798);
+  width: 80pt;
+  border-radius: 30pt;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10pt;
+  cursor: pointer;
+  margin-top: 20pt;
+}
+
+.button-add:hover {
+  background-color: rgba(26, 47, 32, 0.798);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.icon-delete:hover {
+  fill: #f44336;
+}
+
+.icon-edit:hover {
+  fill: #f5a227;
+}
+
+.total {
+  float: right;
+}
+
+button {
+  background-color: rgba(39, 71, 49, 0.798);
+  width: 140pt;
+  border-radius: 30pt;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12pt;
+  cursor: pointer;
+  margin-top: 20pt;
+}
+
+@media only screen and (max-width: 800px) {
+  table,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: bolder;
+    white-space: nowrap;
+  }
+
+  td:nth-child(1):before {
+    content: "Imagen";
+  }
+  td:nth-child(2):before {
+    content: "Nombre";
+  }
+  td:nth-child(3):before {
+    content: "Descripción";
+  }
+  td:nth-child(4):before {
+    content: "Colección";
+  }
+  td:nth-child(5):before {
+    content: "Precio";
+  }
+  td:nth-child(6):before {
+    content: "Cantidad";
+  }
+  td:nth-child(7):before {
+    content: "Subtotal";
+  }
+}

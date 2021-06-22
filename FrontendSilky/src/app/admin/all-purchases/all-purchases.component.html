@@ -1,0 +1,36 @@
+<div class="all-purchases">
+    <div class="title">
+        <h2>Todas las Compras</h2>
+    </div>
+    <hr>
+    <table>
+        <tr>
+          <th>ID</th>
+          <th>Fecha</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let purchase of purchases | paginate : {
+          itemsPerPage: 10,
+          currentPage: page,
+          totalItems: count
+          };">
+          <td>{{purchase.id}}</td>
+          <td>{{purchase.date | date}}</td>
+          <td>$ {{purchase.total}}</td>
+          <td><button (click)='seeDetail(purchase.id)'>Detalle</button></td>
+        </tr>
+    </table>
+
+    <div>
+      <pagination-controls 
+        class="custom-pagination"
+        responsive="true" 
+        previousLabel="Anterior" 
+        nextLabel="Siguiente"
+        (pageChange)="onTableDataChange($event)">
+      </pagination-controls>
+  </div>
+
+</div>
+<app-footer></app-footer>

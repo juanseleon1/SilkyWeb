@@ -1,0 +1,42 @@
+.about-us p {
+  line-height: 1.5em;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.col-1 {
+  width: 50%;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center-content {
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us {
+  width: 100%;
+  padding: 50pt 5pt;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(237, 253, 254);
+}
+
+.text-area {
+  background-color: white;
+  padding: 3em 6em 3em 6em;
+  width: 40%;
+  height: 100%;
+  margin-bottom: 80pt;
+  box-shadow: 1pt 1pt 3pt #999;
+  border-radius: 50pt;
+  text-align: justify;
+}

@@ -1,0 +1,26 @@
+<div class="all-products">
+    <h2>Productos</h2>
+    <hr>
+    <div class="content">
+        <div *ngFor="let product of products | paginate : {
+            itemsPerPage: 10,
+            currentPage: page,
+            totalItems: count
+            };" 
+            class="product">
+            <app-product [product]="product"></app-product>
+        </div>
+    </div>
+
+    <div>
+        <pagination-controls
+          class="custom-pagination"
+          responsive="true" 
+          previousLabel="Anterior" 
+          nextLabel="Siguiente"
+          (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+    </div>
+
+</div>
+<app-footer></app-footer>

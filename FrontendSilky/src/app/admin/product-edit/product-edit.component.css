@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+.edit-product {
+  margin: 5% auto;
+  height: auto;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 50pt;
+  box-shadow: 1pt 1pt 3pt #999;
+  padding: 30pt 40pt 40pt 40pt;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: rgba(245, 242, 242, 0.798);
+  border-radius: 30pt;
+  border: none;
+  padding: 15pt 32pt;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11pt;
+  width: 100%;
+}
+
+.info {
+  margin: 10px 0;
+}
+
+button {
+  background-color: rgba(39, 71, 49, 0.798);
+  width: 100%;
+  border-radius: 30pt;
+  border: none;
+  color: white;
+  padding: 10pt 25pt;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12pt;
+  cursor: pointer;
+  margin-top: 20pt;
+}
+
+button:hover {
+  background-color: rgba(26, 47, 32, 0.798);
+}

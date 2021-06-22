@@ -1,0 +1,21 @@
+<section>
+  <div class="login">
+  <form [formGroup]="formLog">
+      <h2>Log In</h2>
+      <div class="info">
+        <label>Email</label><br>
+        <input formControlName="username" type="email" [ngClass]="{ 'is-invalid': done && form.username.errors }"><br>
+      </div>
+      <div class="info">
+        <label>Contraseña</label><br>
+        <input formControlName="password" type="password"
+          [ngClass]="{ 'is-invalid': done && form.password.errors }"><br>
+      </div>
+      <div class="info">
+        <input class="button-login" (click)="login()" type='submit' value='Log In' />
+        <input class="button-signup" routerLink="/user/signup" value='Sign Up' />
+      </div>
+  </form>
+</div>
+</section>
+<app-footer></app-footer>

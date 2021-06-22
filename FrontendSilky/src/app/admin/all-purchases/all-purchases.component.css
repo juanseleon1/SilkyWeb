@@ -1,0 +1,98 @@
+.all-purchases {
+  margin: 5%;
+  padding: 30pt;
+  box-shadow: 1px 1px 3px #999;
+  border-radius: 50px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  word-wrap: break-word;
+}
+
+td,
+th {
+  padding: 8px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  background-color: rgba(39, 71, 49, 0.798);
+  width: 80pt;
+  border-radius: 30pt;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12pt;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.custom-pagination ::ng-deep .ngx-pagination .current {
+  background: rgba(39, 71, 49, 0.798) !important;
+  border-radius: 50% !important;
+}
+
+.custom-pagination ::ng-deep .ngx-pagination {
+  margin-top: 25px !important;
+}
+
+@media only screen and (max-width: 800px) {
+  table,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: bolder;
+    white-space: nowrap;
+  }
+
+  td:nth-child(1):before {
+    content: "ID";
+  }
+  td:nth-child(2):before {
+    content: "Fecha";
+  }
+  td:nth-child(3):before {
+    content: "Total";
+  }
+  td:nth-child(4):before {
+    content: "";
+  }
+}

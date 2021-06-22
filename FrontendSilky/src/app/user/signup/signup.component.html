@@ -1,0 +1,48 @@
+<section>
+    <div class="signup">
+      <form [formGroup]="formReg" (ngSubmit)="onClick()">
+      <h2>Sign Up</h2>
+      <div class="info">
+        <label>Nombre</label><br>
+        <input formControlName="name" type="text" [ngClass]="{ 'is-invalid': done && form.name.errors }"><br>
+        <div *ngIf="done && form.name.errors" class="invalid-feedback">
+          <div *ngIf="form.name.errors.required">El nombre es requerido</div>
+        </div>
+      </div>
+      <div class="info">
+        <label>Apellidos</label><br>
+        <input formControlName="lastName" type="text" [ngClass]="{ 'is-invalid': done && form.lastName.errors }"><br>
+        <div *ngIf="done && form.lastName.errors" class="invalid-feedback">
+          <div *ngIf="form.lastName.errors.required">El apellido es requerido</div>
+        </div>
+      </div>
+      <div class="info">
+        <label>Email</label><br>
+        <input formControlName="email" type="email" [ngClass]="{ 'is-invalid': done && form.email.errors }"><br>
+        <div *ngIf="done && form.email.errors" class="invalid-feedback">
+          <div *ngIf="form.usname.email.required">El email es requerido</div>
+          <div *ngIf="form.usname.email.email">El email ingresado es incorrecto</div>
+        </div>
+      </div>
+      <div class="info">
+        <label>Contraseña</label><br>
+        <input formControlName="password" type="password"
+          [ngClass]="{ 'is-invalid': done && form.password.errors }"><br>
+        <div *ngIf="done && form.password.errors" class="invalid-feedback">
+          <div *ngIf="form.password.errors.required">La contraseña es requerida</div>
+          <div *ngIf="f.password.errors.minlength">La contraseña debe tener longitud mayor a seis (6) caracteres</div>
+        </div>
+      </div>
+      <div class="info">
+        <input class="button-signup" type='submit' value='Registrese'/>
+        <div class="bottom-comp">
+          <p>¿Ya tienes una cuenta SILKY?</p>
+          <a routerLink="/user/login">
+            <input class="button-login" type='button' value='Log In' />
+          </a>
+        </div>
+      </div>
+    </form>
+    </div>
+</section>
+<app-footer></app-footer>
